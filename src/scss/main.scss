@@ -1,0 +1,29 @@
+@import "node_modules/normalize.css/normalize";
+@import "variables";
+@import "mixins";
+@import "scaffolding";
+
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.state-machine {
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid rebeccapurple;
+}
+
+.state-machine__stage {
+  display: none;
+  text-align: center;
+
+  &--0 {
+    display: block;
+  }
+}
+
+.state-machine__button {
+  margin-top: 50px;
+}
