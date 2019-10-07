@@ -1,3 +1,5 @@
+import anime from 'animejs'
+
 import {
   hideStage0,
   showStage1,
@@ -7,6 +9,8 @@ import {
   showStage3,
   hideStage3
 } from './stateFunction'
+
+let anim = anime()
 
 const stateList = {
   begin: {
@@ -24,14 +28,16 @@ const stateList = {
   stage1: {
     name: 'stage1',
     onStart() {
+      anim.pause()
       hideStage0()
-      showStage1()
+      anim = showStage1()
     },
     condition() {
       return true
     },
     onEnd() {
-      hideStage1()
+      anim.pause()
+      anim = hideStage1()
     }
   },
   stage2: {
