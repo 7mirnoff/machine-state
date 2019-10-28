@@ -7,12 +7,15 @@ body {
   display: flex;
   align-items: center;
   height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
 .state-machine {
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
-  border: 1px solid rebeccapurple;
+  padding: 20px;
+  border: 1px solid rgb(64,199,129);
+  border-radius: 20px;
 }
 
 .state-machine__stage {
@@ -27,4 +30,21 @@ body {
 
 .state-machine__button {
   margin-top: 50px;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background: rgb(53, 167, 110);
+    outline: none;
+  }
+  &:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
+  }
 }
